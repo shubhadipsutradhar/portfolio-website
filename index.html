@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shubhadip Sutradhar's portfolio showcasing expertise, education, experiences, and more.">
+    <title>Shubhadip Sutradhar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff; /* Default text color */
+            background-color: #06071f; /* Match the header background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+        /* Header styling */
+        header {
+            background: #06071f;
+            color: #fff;
+            padding: 1em 0;
+        }
+        .header-container {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 24px;
+            font-family: 'Cursive', sans-serif;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin-left: auto;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            position: relative;
+            font-family: 'Arial', sans-serif;
+        }
+        nav ul li a:hover::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, red, blue);
+            bottom: -4px;
+            left: 0;
+        }
+        /* Responsive navigation for smaller screens */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                display: none;
+                padding-left: 0;
+                margin: 0;
+                background: #06071f; /* Background for mobile menu */
+                position: absolute;
+                top: 60px; /* Adjust based on header height */
+                right: 0;
+                width: 100%;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .menu-button {
+                display: block;
+            }
+        }
+        .settings-icon {
+            font-size: 20px;
+            cursor: pointer;
+            margin: 0 15px;
+        }
+        .menu-button {
+            display: none;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 0 15px;
+        }
+        .container {
+            flex: 1;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding-top: 1em;
+        }
+        section {
+            padding: 2em 0;
+            background-color: #06071f; /* Match the header background */
+            color: #fff; /* Text color set to white */
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 0.5em;
+            font-family: 'Arial', sans-serif;
+        }
+        .card {
+            background: #fff;
+            color: #333; /* Text color inside the card */
+            padding: 1em;
+            margin: 1em 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background: linear-gradient(90deg, #2c003e, #06071f);
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo" style="margin-left: 20px;">
+            <img src="shubhadip logo.jpg" alt="Logo" style="height: 80px; vertical-align: middle; max-height: 100%;">
+            </div>
+            <nav aria-label="Main Navigation">
+                <div class="menu-button" aria-label="Toggle menu" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#honors-achievements">Achievements</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+    <!-- HOME Section -->
+    <section id="home">
+    <style>
+        .home-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .home-content {
+            flex: 2;
+            text-align: left;
+        }
+        .profile-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column; /* Added to stack image and button */
+            align-items: center; /* Center align the button */
+        }
+        .profile-image img {
+            width: 350px; /* Adjust the size as needed */
+            height: auto;
+            object-fit: contain; /* Make sure it displays as in the reference */
+            border: none; /* Remove the border */
+        }
+        .connect-btn {
+            background-color: #5b00b2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline from link */
+            font-family: 'Courier New', Courier, monospace; /* Different font */
+        }
+        .connect-btn:hover {
+            background-color: #3a008a;
+        }
+        .social-icons {
+            margin-top: 30px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #ff6347;
+        }
+        .highlight-container {
+            display: inline-block;
+            color: #cffc06; /* Green color for "SHUBHADIP SUTRADHAR" */
+            font-family: 'Cursive', sans-serif;
+            font-size: 1.5em; /* Match the size of "I'm" */
+        }
+        .highlight-container .highlight {
+            color: #cffc06; /* Green color for "SHUBHADIP SUTRADHAR" */
+        }
+        .highlight-container .highlight-white {
+            color: #ffffff; /* White color for "I'm" */
+        }
+        .subtitle {
+            font-size: 1.8em;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #ec06fc;
+            font-family: 'Georgia', serif;
+        }
+        .highlights-list {
+            list-style: none;
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #efe8e8;
+            font-family: 'Verdana', sans-serif;
+        }
+        .highlights-list i {
+            color: #ff6347;
+            margin-right: 10px;
+        }
+        .home-content h1 span {
+            display: inline-block;
+        }
+        /* Match font size of Welcome to "I'm SHUBHADIP SUTRADHAR" */
+        .home-content h1 {
+            font-size: 1.8em; /* Set the size same as SHUBHADIP SUTRADHAR */
+        }
+        /* Add margin to create space between Welcome to my Site and I'm Shubhadip Sutradhar */
+        .welcome-message {
+            margin-bottom: 20px; /* Adjust this value to control the spacing */
+        }
+    </style>
+    <script>
+        // Function to toggle mobile navigation
+        function toggleMenu() {
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+    <div class="home-container">
+        <!-- Left Column - Text Content -->
+        <div class="home-content">
+            <h1 class="welcome-message">Welcome to my Techverse <span class="wave">🙋‍♂</span></h1>
+            <h1><span class="highlight-container"><span class="highlight-white">I'm&nbsp;</span><span class="highlight" style="font-size: 1.2em;">SHUBHADIP SUTRADHAR</span></span></h1>
+            <p class="subtitle">🎯 Evolving Software Engineer │ 🌟 Digital Innovator</p>
+
+            <!-- Key Points with Icons -->
+            <ul class="highlights-list">
+                <li>💻 Bringing ideas to life through the power of code.</li>
+                <li>🚀 Exploring the ever-evolving landscape of technology.</li>
+                <li>💡 Embracing innovation to craft creative solutions.</li>
+                <li>🧩 Breaking down complexity into elegant simplicity.</li>
+            </ul>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/shubhadipsutradhar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.x.com/shubhadip_offcl" target="_blank"><i class="fab fa-x"></i></a>
+                <a href="https://www.instagram.com/shubhadip_sutradhar" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.github.com/shubhadipsutradhar" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.youtube.com/@shubhadip_sutradhar" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/shubhadipsutradhar0" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <!-- Right Column - Profile Image -->
+        <div class="profile-image">
+            <img src="shubhadip rounded.png" alt="Shubhadip Sutradhar" style="border-radius: 50%;">
+            <a href="https://linktr.ee/shubhadipsutradhar" class="connect-btn">🔗🤝 Instant Connect</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT Section -->
+<section id="about">
+    <style>
+        #about {
+            background-color: inherit; /* Matches the full portfolio site color */
+            padding: 40px 20px;
+            color: #41ae66; /* Dark text color for readability */
+        }
+        .about-container {
+            display: flex;
+            align-items: center; /* Center align items vertically */
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align the image slightly upward */
+            margin-top: 10px; /* Adjust margin to move the image slightly upward */
+        }
+        .about-image img {
+            width: 350px; /* Adjust image size as needed */
+            height: auto;
+            object-fit: contain;
+            border: none;
+        }
+        .about-content {
+            flex: 2;
+            padding-left: 60px; /* Increased padding to move content rightward */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center the text vertically */
+        }
+        .about-heading {
+            font-size: 2.5em;
+            color: #09f02f; /* Deep green color for the heading */
+            font-weight: bold;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+        .about-heading i {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #41d50f;
+        }
+        .about-description {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #2d7a2f; /* Ensure text color is dark for readability */
+        }
+        .about-description i {
+            color: #09cb06;
+            margin-right: 8px;
+        }
+        .about-description strong {
+            color: #f9f9f9;
+        }
+        .highlight-text {
+            color: #ffffff; /* White color for visibility */
+        }
+        .resume-btn {
+            background-color: #5b00b2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1em; /* Match the font size of the text */
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px; /* Reduced margin to decrease spacing */
+            transition: background-color 0.3s ease;
+            display: block;
+            text-align: center;
+            text-decoration: none; /* Remove underline from link */
+            width: auto; /* Adjust width to fit the text */
+        }
+        .resume-btn:hover {
+            background-color: #3a008a;
+        }
+        .highlight-red {
+            color: rgb(250, 234, 5); /* Yellow color for the specific text */
+        }
+        .about-description p {
+            margin-bottom: 20px; /* Add margin to maintain equal spacing */
+        }
+        .resume-btn-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <div class="about-container">
+        <!-- Left Column - Profile Image -->
+        <div class="about-image">
+            <img src="shubhadip.jpg" alt="Shubhadip Sutradhar">
+        </div>
+
+        <!-- Right Column - About Content -->
+        <div class="about-content">
+            <h1 class="about-heading"><i class="fas fa-user"></i> ABOUT ME</h1>
+            <div class="about-description">
+                <p><strong>👋 ABOUT : </strong> <span class="highlight-red">I'm Shubhadip Sutradhar, a 2nd-year undergraduate student currently pursuing B.Tech in Computer Science & Engineering.</span></p>
+                <p><strong>🏫 INSTITUTE : </strong> <span class="highlight-red">Currently enrolled at Siliguri Institute of Technology under Maulana Abul Kalam Azad University of Technology, diving into the world of technology and innovation.</p>
+                <p><strong>👨‍💻 SUBJECTS OF INTEREST : </strong> <span class="highlight-red">Passionate about Computer Science, I'm exploring development, data science, artificial intelligence, networking & cybersecurity.</p>
+                <p><strong>💻 CODING ENTHUSIAST : </strong> <span class="highlight-red">Learning programming languages with an aspiration of becoming a software engineer.</p>
+                <p><strong>🔮 ACADEMICS & FUTURE GOALS : </strong> <span class="highlight-red">Committed to excelling academically, my goal is to make real-world CS projects and contribute to innovative solutions for societal impact.</p>
+                <p><strong>😊 HOBBIES & INTERESTS : </strong> <span class="highlight-red">Beyond academics, I enjoy listening to songs, watching movies, painting, fostering a balanced approach to life.</p>
+            </div>
+            <div class="resume-btn-container">
+                <a href="Shubhadip Sutradhar_Resume.pdf" class="resume-btn" target="_blank">My Resume</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- EDUCATION Section -->
+<section id="education">
+    <style>
+        .education-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 20px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 8px;
+            height: 100%;
+            background-color: #f2c40e; /* Thick connecting line */
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        .timeline-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 420px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-content h3 {
+            margin: 10px 0;
+            color: #ff00d9;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .timeline-content p.school-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .timeline-content p.description {
+            font-size: 1em;
+            font-family: 'Arial', sans-serif; /* Clearer font */
+            color: #ff5722; /* Bright color */
+            font-weight: bold; /* Bold text */
+            font-style: normal; /* Removed italics */
+            margin-top: 5px;
+        }
+
+        .education-heading {
+            font-size: 2.5em;
+            color: #01ff2b;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .education-heading i {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ef0c0c;
+        }
+
+        .school-image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .school-image img {
+            max-width: 100%;
+            max-height: 80px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fix the vertical line length */
+        .timeline-item:last-child::before {
+            height: 50%;
+        }
+    </style>
+
+    <div class="education-container">
+        <h1 class="education-heading"><i class="fas fa-graduation-cap"></i> MY EDUCATION</h1>
+
+        <div class="timeline">
+            <!-- St. Xavier's School -->
+            <div class="timeline-item">
+                <div class="timeline-content">                  
+                    <div class="school-image">
+                        <img src="sxs logo.jpeg" alt="St. Xavier's School">
+                    </div>
+                    <p class="school-name">St. Xavier's School, Alipurduar, WB</p>
+                    <h3>(2015 - 2021)</h3>
+                    <p class="description">Completed my Secondary from ICSE</p>
+                </div>
+            </div>
+
+            <!-- Railway H.S. School -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="school-image">
+                        <img src="rhss logo.png" alt="Railway H.S. School">
+                    </div>
+                    <p class="school-name">Railway Higher Secondary School, Alipurduar, WB</p>
+                    <h3>(2021 - 2023)</h3>
+                    <p class="description">Completed Higher Secondary from CBSE in PCMB</p>
+                </div>
+            </div>
+
+            <!-- Siliguri Institute of Technology -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="school-image">
+                        <img src="sit logo.jpg" alt="Siliguri Institute of Technology">
+                    </div>
+                    <p class="school-name">Siliguri Institute of Technology, Darjeeling, WB</p>
+                    <h3>(2023 - Present)</h3>
+                    <p class="description">B.Tech in Computer Science & Engineering</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- EXPERIENCES Section -->
+<section id="experiences">
+    <style>
+        .experiences-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .experiences-heading {
+            font-size: 2.5em;
+            color: #09f02f;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .experiences-heading i {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ef0c0c;
+        }
+        .experience-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 150px; /* Set a fixed height for all experience items */
+        }
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .experience-icon {
+            font-size: 2em;
+            color: #5b00b2;
+        }
+        .experience-content {
+            flex: 1;
+        }
+        .experience-title {
+            font-size: 1.5em;
+            color: #5b05f0;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .experience-company {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #e91e63;
+            font-family: 'Georgia', serif;
+            margin-bottom: 10px;
+        }
+        .experience-date {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .experience-item {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto; /* Allow height to adjust for smaller screens */
+            }
+        }
+    </style>
+    <div class="experiences-container">
+        <h1 class="experiences-heading"><i class="fas fa-briefcase"></i> MY EXPERIENCES</h1>
+        <div class="experience-item">
+            <div class="experience-icon">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="experience-content">
+                <div class="experience-title">Ambassador</div>
+                <div class="experience-company">Creds</div>
+                <div class="experience-date">Feb 2025 - Present</div>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-icon">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="experience-content">
+                <div class="experience-title">Community Captain </div>
+                <div class="experience-company">Zuno by Foundit</div>
+                <div class="experience-date">Jan 2025 - Present</div>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-icon">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="experience-content">
+                <div class="experience-title">Indigo Squad Member</div>
+                <div class="experience-company">Mood Indigo, IIT Bombay</div>
+                <div class="experience-date">Nov 2024 - Present</div>
+            </div>
+        </div>
+        
+
+        <div class="experience-item">
+            <div class="experience-icon">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="experience-content">
+                <div class="experience-title">Student Ambassador</div>
+                <div class="experience-company">LetsUpgrade</div>
+                <div class="experience-date">Aug 2024 - Aug 2024</div>
+            </div>
+        </div>
+
+
+        <div class="experience-item">
+            <div class="experience-icon">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="experience-content">
+                <div class="experience-title">Internshala Student Partner</div>
+                <div class="experience-company">Internshala</div>
+                <div class="experience-date">Jun 2024 - Aug 2024</div>
+            </div>
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-icon">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="experience-content">
+                <div class="experience-title">Campus Ambassador</div>
+                <div class="experience-company">International Model United Nations</div>
+                <div class="experience-date">Apr 2024 - May 2024</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- SKILLS Section -->
+<section id="skills">
+    <style>
+        .skills-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .skills-heading {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #09f02f;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .skills-heading i {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff4500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 columns */
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skill-item {
+            text-align: center;
+        }
+
+        .skill-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-item p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1200px) {
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 per row on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 per row on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: repeat(1, 1fr); /* 1 per row on very small screens */
+            }
+        }
+    </style>
+
+    <div class="skills-container">
+        <h1 class="skills-heading"><i class="fas fa-code"></i> MY SKILLS & ABILITIES</h1>
+
+        <div class="skills-grid">
+            <div class="skill-item">
+                <img src="java.png" alt="Java">
+                <p>Java</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="python.png" alt="Python">
+                <p>Python</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="c.png" alt="C">
+                <p>C</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="engineering.png" alt="Engineering">
+                <p>Engineering</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="science.jpg" alt="Science">
+                <p>Science</p>
+            </div>
+
+            <div class="skill-item">
+                <img src="softskills.png" alt="Soft Skills">
+                <p>Soft Skills</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- MY HONORS & ACHIEVEMENTS Section -->
+<section id="honors-achievements">
+    <style>
+        .achievements-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .achievements-heading {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #09f02f;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .achievements-heading i {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff4400;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 20px;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .achievement-item {
+            text-align: center;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .achievement-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .achievement-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .achievement-description {
+            margin-top: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333; /* Make the description visible */
+        }
+
+        .achievement-details {
+            font-size: 0.9em;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 1200px) {
+            .achievements-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 per row on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .achievements-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 per row on small screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .achievements-grid {
+                grid-template-columns: repeat(1, 1fr); /* 1 per row on very small screens */
+            }
+        }
+    </style>
+
+    <div class="achievements-container">
+        <h1 class="achievements-heading"><i class="fas fa-trophy"></i> MY HONORS & ACHIEVEMENTS</h1>
+
+        <div class="achievements-grid">
+            <div class="achievement-item">
+                <img src="Poster Making Competition Certificate.jpeg" alt="Achievement 1">
+                <p class="achievement-description">2nd in District Poster Making Competition</p>
+                <p class="achievement-details">🔴 Issued by - <strong>Government of West Bengal</strong></p>
+                <p class="achievement-details">📅 Issued on - <strong>July 2017</strong></p>
+            </div>
+
+            <div class="achievement-item">
+                <img src="cit partcipated qualified.jpg" alt="Achievement 2">
+                <p class="achievement-description">Participated & Qualified in Common Internship Test</p>
+                <p class="achievement-details">🔴 Issued by - <strong>Internship Studio</strong></p>
+                <p class="achievement-details">📅 Issued on - <strong>May 2024</strong></p>
+            </div>
+
+            <div class="achievement-item">
+                <img src="Naukri Campus Young Turks_Skills Contest.jpg" alt="Achievement 3">
+                <p class="achievement-description">Naukri Campus Young Turks</p>
+                <p class="achievement-details">🔴 Issued by - <strong>Naukri Campus</strong></p>
+                <p class="achievement-details">📅 Issued on - <strong>Oct 2024</strong></p>
+            </div>
+
+            <div class="achievement-item">
+                <img src="ICTDsC 2024.jpg" alt="Achievement 4">
+                <p class="achievement-description">International Conference on Data Science & Communication</p>
+                <p class="achievement-details">🔴 Issued by - <strong>Siliguri Institute of Technology</strong></p>
+                <p class="achievement-details">📅 Issued on - <strong>Nov 2024</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- MY PROJECTS Section -->
+<section id="projects">
+    <style>
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .projects-heading {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #09f02f;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .projects-heading i {
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: #ff4500;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .project-item {
+            text-align: center;
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-name {
+            margin-top: 10px;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: rgb(251, 8, 247);
+        }
+
+        .live-project-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            font-size: 1em;
+            font-weight: bold;
+            color: white;
+            background: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .live-project-btn:hover {
+            background: #0056b3;
+        }
+
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 per row on medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(1, 1fr); /* 1 per row on small screens */
+            }
+        }
+    </style>
+
+    <div class="projects-container">
+        <h1 class="projects-heading"><i class="fas fa-laptop-code"></i> MY PROJECTS</h1>
+
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="diptronic.jpg" alt="Project 1">
+                <p class="project-name">DIPTRONIC : Your ElectroTech Hub</p>
+                <a href="https://diptronic.netlify.app" class="live-project-btn" target="_blank">Visit </a>
+            </div>
+
+            <div class="project-item">
+                <img src="coming soon.png" alt="Project 2">
+                <p class="project-name">Project 2</p>
+                <a href="" class="live-project-btn" target="_blank">Visit</a>
+            </div>
+
+            <div class="project-item">
+                <img src="coming soon.png" alt="Project 3">
+                <p class="project-name">Project 3</p>
+                <a href="" class="live-project-btn" target="_blank">Visit</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+    <style>
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-form {
+            flex: 1;
+            background: #f4f9fd;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        .contact-heading {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #09f02f;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            background: #e0f0ff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .input-group i {
+            margin-right: 10px;
+            color: #4a90e2;
+        }
+
+        .contact-input, .contact-textarea {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 1em;
+            width: 100%;
+        }
+
+        .contact-textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .send-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            background: #00a6ff;
+            border: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .send-btn:hover {
+            background: #0077cc;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            color: green;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 1024px) {
+            .contact-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/manenegj" method="POST">
+            <h1 class="contact-heading">📞 GET IN TOUCH</h1>
+
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Name" class="contact-input" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Email" class="contact-input" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-comment"></i>
+                <textarea name="message" placeholder="Message" class="contact-textarea" required></textarea>
+            </div>
+
+            <button type="submit" class="send-btn">Send Message</button>
+            <p class="success-message" id="success-message">✅ Message sent successfully!</p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            var form = this;
+            var formData = new FormData(form);
+            
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById("success-message").style.display = "block";
+                    form.reset(); // Clear form after successful submission
+                } else {
+                    alert("❌ Something went wrong. Please try again.");
+                }
+            }).catch(error => {
+                alert("❌ Error: " + error.message);
+            });
+        });
+    </script>
+</section>
+
+
+
+
+<footer style="background:#06071f ; color: white; text-align: center; padding: 20px; font-size: 16px; font-family: Arial, sans-serif;">
+    <p style="margin: 5px 0;">&copy; 2025 - Present | All Rights Reserved.</p>
+    <p style="margin: 5px 0;">By <strong style="color: #ff4c68;">Shubhadip Sutradhar</strong></p>
+</footer>
+</body>
+</html>
